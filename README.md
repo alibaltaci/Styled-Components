@@ -179,3 +179,16 @@ Oluşturduğumuz componentler fonksiyonel özelliklerini kaybetmez.
 ```
 <Button as="a" href="/styled">Regular Button</Button>
 ```
+
+# Pseudo Classes
+
+```
+const BlackButton = styled(Button)`
+  color: white;
+  background-color: black;
+
+  &:hover{
+    background-color: violet;
+  }
+`;
+```

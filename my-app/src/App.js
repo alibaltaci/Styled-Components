@@ -59,10 +59,14 @@ const Button = styled.button`
   background-color: ${ (props) => (props.primary ? "palevioletred" : "white")};
 `;
 
-// extend
+// extend & pseudo classes
 const BlackButton = styled(Button)`
   color: white;
   background-color: black;
+
+  &:hover{
+    background-color: violet;
+  }
 `;
 
 
