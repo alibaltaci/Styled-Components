@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, CSS, css} from 'styled-components';
 
 // Styled Components (CSS in JS and the CSS Module)
 // React & React Native 
@@ -41,10 +41,23 @@ const Container = styled.div`
   }
 `;
 
+// const Header = styled.h1`
+//   font-family: "Hachi Maru Pop", cursive;
+//   font-size: 5rem;
+//   color: white;
+// `;
+
+// css Block
 const Header = styled.h1`
   font-family: "Hachi Maru Pop", cursive;
   font-size: 5rem;
   color: white;
+  ${ (props) => 
+    props.xyz && 
+    css`
+      font-size: 55px;
+      color: violet;
+    `}
 `;
 
 const Content = styled.p`
@@ -93,6 +106,7 @@ function App() {
   return (
     <Container>
       <Header>Styled Components</Header>
+      <Header xyz>Styled Components</Header>
       <Content>Code With Me!</Content>
       
       {/* <Header>Styled Components</Header> */}

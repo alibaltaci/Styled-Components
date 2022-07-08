@@ -213,3 +213,50 @@ const Container = styled.div`
   }
 `;
 ```
+
+# keyframes
+
+### Animation
+```
+const rotate = keyframes`
+  from{
+    transform: rotate(0deg);    
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const Rotate = styled.div`
+  display: inline-block;
+  animation: ${rotate} 2s linear infinite;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+`;
+```
+
+```
+<Rotate>Animation</Rotate>
+```
+
+# CSS Block
+
+Bir CSS değil CSS Bloğu döndürür.
+
+` import styled, {CSS} from 'styled-components'; `
+
+```
+const Header = styled.h1`
+  font-family: "Hachi Maru Pop", cursive;
+  font-size: 5rem;
+  color: white;
+  ${ (props) => 
+    props.xyz && 
+    css`
+      font-size: 55px;
+      color: violet;
+    `}
+`;
+```
+
+
