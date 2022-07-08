@@ -35,6 +35,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 900px){
+    background-color: black;
+  }
 `;
 
 const Header = styled.h1`

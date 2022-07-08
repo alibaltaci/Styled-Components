@@ -192,3 +192,24 @@ const BlackButton = styled(Button)`
   }
 `;
 ```
+
+# Media Query
+
+```
+const Container = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90rem;
+  height: 100vh;
+  padding: 2rem;
+  background-color: darkturquoise;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 900px){
+    background-color: black;
+  }
+`;
+```
