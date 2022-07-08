@@ -48,14 +48,36 @@ const Content = styled.p`
   font-size: 3rem;
 `;
 
+// props
+const Button = styled.button`
+  margin: 1rem;
+  padding: 1.25rem;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  font-size: 1em;
+  color: ${ (props) => (props.primary ? "white" : "palevioletred")};
+  background-color: ${ (props) => (props.primary ? "palevioletred" : "white")};
+`;
+
+// extend
+const BlackButton = styled(Button)`
+  color: white;
+  background-color: black;
+`;
+
 
 function App() {
   return (
     <Container>
       <Header>Styled Components</Header>
       <Content>Code With Me!</Content>
-    </Container>
+      
+      {/* <Header>Styled Components</Header> */}
 
+      <Button as="a" href="/styled">Regular Button</Button>
+      <Button primary onClick={() => console.log("Click Primary Button")}>Primary Button</Button>
+      <BlackButton onClick={() => console.log("Click Black Button")}>Black Button</BlackButton>
+    </Container>
   );
 }
 
